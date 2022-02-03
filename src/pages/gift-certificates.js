@@ -61,24 +61,18 @@ const GiftCertificatesPage = () => (
     <SEO title="Gift Certificates" />
     <DefaultLayoutContent>
       <h3>Flights</h3>
-      <p>All prices exclude applicable taxes.</p>
-      <p>Gift certificates can also be purchased with payment via e-transfer.</p>
+      <p>All prices exclude applicable taxes. They are NON-REFUNDABLE.</p>
       <p>
+        Gift certificates can also be purchased with payment via Interac e-transfer.
+        <br />
         <a href="mailto:montgomery@nexicom.net?subject=Gift%20Certificate%20Purchase">
-        E-mail us today to order one.
+          E-mail us today to order one.
         </a>
       </p>
 
       <Package
-        title="10 Minute Introductory Flight"
-        cost="$50"
-        description="Experience the pure joy of flying in a two-seater, open air ultralight trike."
-        paypalId="E7UMBNUQ94HM6"
-      />
-
-      <Package
         title="30 Minute Discovery Flight"
-        cost="$95"
+        cost="$100"
         description="Learn basic control of the aircraft, and experience a
           30 minute discovery flight over the Kawarthas."
         paypalId="TCAW3VTBMV55J"
@@ -86,7 +80,7 @@ const GiftCertificatesPage = () => (
 
       <Package
         title="60 Minute Orientation Flight"
-        cost="$145"
+        cost="$165"
         description="In a one hour flight, you will enjoy the beauty of the Kawarthas as never seen before. We can cruise over the Otonabee river at 2,000 feet, and fly the north shore of Rice Lake."
         paypalId="WGQNMP6RA2X9N"
       />
@@ -95,8 +89,8 @@ const GiftCertificatesPage = () => (
 
       <Package
         title="5 Hours of Lessons"
-        cost="$700 (save $25!)"
-        description="Buy 5 hours in advance and save $25."
+        cost="$825"
+        description="Pre-pay for lessons for a loved one."
         paypalId="FXP7L6XT6ZNKW"
       />
     </DefaultLayoutContent>

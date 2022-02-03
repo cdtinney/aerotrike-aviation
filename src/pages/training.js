@@ -19,7 +19,6 @@ const TrainingPage = () => (
           </ul>
 
           <h3>Costs</h3>
-
           <p>All prices exclude applicable taxes.</p>
 
           <table className="table table-bordered table-striped">
@@ -29,12 +28,28 @@ const TrainingPage = () => (
                 <th>Cost</th>
               </tr>
               <tr>
-                <td>Lessons</td>
-                <td>$145 / hour</td>
+                <td>30 minute discovery flight</td>
+                <td>$100</td>
               </tr>
               <tr>
-                <td>5 hours of lessons</td>
-                <td>$700 (save $25!)</td>
+                <td>One hour orientation flight</td>
+                <td>$165</td>
+              </tr>
+              <tr>
+                <td>Lessons</td>
+                <td>$165 / hour (includes plane, instructor, and fuel)</td>
+              </tr>
+              <tr>
+                <td>Lessons - 5 hour package</td>
+                <td>$825</td>
+              </tr>
+              <tr>
+                <td>Lessons - 20 hours (minimum for solo rating)</td>
+                <td>$3300</td>
+              </tr>
+              <tr>
+                <td>Pre-flight and post-flight briefings</td>
+                <td>$200 (due on signup for lessons)</td>
               </tr>
               <tr>
                 <td>Flight Test for Instructors Rating</td>
@@ -53,24 +68,48 @@ const TrainingPage = () => (
               </div>
             </div>
             <div className="panel-body">
-              No passengers are allowed on basic ultralights (trikes) unless the pilot has an
-              instructor rating or the passenger is themselves a licensed pilot.
+              <h4>Scheduling flights</h4>
+              <li>
+                It is the responsibility of the student to
+                {' '}
+                <b>pre-book all flight times.</b>
+              </li>
+              <li>
+                All flights will be confirmed (after checking weather) by the student
+                {' '}
+                <b>by phone</b>
+                {' '}
+                either the evening before the morning flight OR by 2pm for an evening flight.
+              </li>
+              <li>
+                Flights cannot be booked or changed by text or e-mail.
+                {' '}
+                <b>They MUST be changed via phone.</b>
+              </li>
+              <li>
+                To ensure each student gets their reserved flight lesson time, always arrive
+                {' '}
+                <b> 15-30 minutes prior </b>
+                to your scheduled flight time.
+              </li>
               <br />
-              <br />
-              To ensure each student gets their reserved flight lesson time, always arrive
-              <b> at least 30 minutes prior </b>
-              to your scheduled flight time.
-              <br />
-              <br />
-              All flights will be
-              <b> confirmed by phone </b>
-              the evening before a flight.
-              <br />
-              <br />
+              <h4>Cancellation</h4>
               It is the students responsibility to notify Aerotrike Aviation of a cancellation
               a minimum of 12 hours before the pre-arranged flight time.
               Failure to do so will result in a
+              {' '}
               <b> $50.00 cancellation fee.</b>
+              <br />
+              <br />
+              <h4>Miscellaneous</h4>
+              <li>
+                We typically do not fly mid-day due to thermal activity.
+                It is much more enjoyable to fly in the early morning and early evening.
+              </li>
+              <li>
+                No passengers are allowed on basic ultralights (trikes) unless the pilot has an
+                instructor rating or the passenger is themselves a licensed pilot.
+              </li>
             </div>
           </div>
 
@@ -82,8 +121,13 @@ const TrainingPage = () => (
           </p>
 
           <h4>Costs</h4>
+          <p>All prices exclude applicable taxes.</p>
           <table className="table table-bordered table-striped">
             <tbody>
+              <tr>
+                <th>Service</th>
+                <th>Cost</th>
+              </tr>
               <tr>
                 <td>Course</td>
                 <td>$300</td>
