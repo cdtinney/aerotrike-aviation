@@ -28,7 +28,7 @@
   "license": "UNLICENSED",
   "scripts": {
     "build": "gatsby build",
-    "deploy:manual": "npm run build && cp public ../temp-public && git checkout master && cp ../temp-public -R .",
+    "deploy:manual": "npm run build && cp -R public ../temp-public && git checkout master && cp -R ../temp-public .",
     "dev": "gatsby develop",
     "start": "npm run dev",
     "serve": "gatsby serve"
