@@ -23,60 +23,6 @@ const SalesPage = () => (
       <h3>Used</h3>
       <div className="panel panel-default used-sale">
         <div className="panel-heading">
-          <h3 className="panel-title">2004 Airborne 912XT</h3>
-          <span className="price">$25,000 CAD</span>
-        </div>
-        <div className="panel-body">
-          <img alt="airborne edge" className="thumbnail" src={Airborne9121} />
-          <span className="information">
-            <ul>
-              <li>Engine - Rotax 912 (885 hours)</li>
-              <li>Wing - 2007 Streak 3 (665 hours)</li>
-              <li>2004 Parachute</li>
-              <li>Fully setup for training</li>
-              <li>Custom-made foot steering - height-adjustable and removable</li>
-              <li>Pick-up only</li>
-            </ul>
-          </span>
-        </div>
-      </div>
-      <div className="panel panel-default used-sale">
-        <div className="panel-heading">
-          <h3 className="panel-title">Airborne Redback</h3>
-          <span className="price">$11,900 CAD</span>
-        </div>
-        <div className="panel-body">
-          <img alt="airborne edge" className="thumbnail" src={AirborneRedback1} />
-          <span className="information">
-            <ul>
-              <li>Engine - Rotax 503 (300 hours) - 2-stroke</li>
-              <li>Wing - Aeros Stream</li>
-              <li>New flying wires, extra base tube</li>
-              <li>2017 BRS Repack</li>
-              <li>Comms gear with two intercom helmets</li>
-              <li>Training bars</li>
-            </ul>
-          </span>
-        </div>
-      </div>
-      <div className="panel panel-default used-sale">
-        <div className="panel-heading">
-          <h3 className="panel-title">2012 Airborne T-Lite</h3>
-          <span className="price">$12,000 CAD</span>
-        </div>
-        <div className="panel-body">
-          <img alt="airborne edge" className="thumbnail" src={AirborneTLite1} />
-          <span className="information">
-            <ul>
-              <li>Engine - Bailey (55 hours) - 4-stroke</li>
-              <li>Wing - Core</li>
-              <li>Recovery parachute</li>
-            </ul>
-          </span>
-        </div>
-      </div>
-      <div className="panel panel-default used-sale">
-        <div className="panel-heading">
           <h3 className="panel-title">2000 Sabre Folding Style</h3>
           <span className="price">$5,000 CAD</span>
         </div>
@@ -87,23 +33,6 @@ const SalesPage = () => (
               <li>Wing - SS Wing 16m (2nd Generation)</li>
               <li>Ski Package</li>
               <li>Stored indoors</li>
-            </ul>
-          </span>
-        </div>
-      </div>
-      <div className="panel panel-default used-sale">
-        <div className="panel-heading">
-          <h3 className="panel-title">2003 Airborne Edge</h3>
-          <span className="price">$17,000 CAD</span>
-        </div>
-        <div className="panel-body">
-          <img alt="airborne edge" className="thumbnail" src={AirborneEdge} />
-          <span className="information">
-            <ul>
-              <li>Engine - Rotax 582 (61 hours TT)</li>
-              <li>Wing - 2002 Wizard (98 hours)</li>
-              <li>Instructor Package - dual steering, training bars, and rear throttle</li>
-              <li>Comtronics helmet and headsets</li>
             </ul>
           </span>
         </div>
