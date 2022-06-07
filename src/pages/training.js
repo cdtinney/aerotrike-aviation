@@ -29,15 +29,15 @@ const TrainingPage = () => (
               </tr>
               <tr>
                 <td>30 minute discovery flight</td>
-                <td>$100</td>
+                <td>$125</td>
               </tr>
               <tr>
                 <td>One hour orientation flight</td>
-                <td>$165</td>
+                <td>$195</td>
               </tr>
               <tr>
                 <td>Lessons</td>
-                <td>$165 / hour (includes plane, instructor, and fuel)</td>
+                <td>$195 / hour (includes plane, instructor, and fuel)</td>
               </tr>
               <tr>
                 <td>Lessons - 5 hour package</td>

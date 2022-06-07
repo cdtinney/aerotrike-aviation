@@ -72,7 +72,7 @@ const GiftCertificatesPage = () => (
 
       <Package
         title="30 Minute Discovery Flight"
-        cost="$100"
+        cost="$125"
         description="Learn basic control of the aircraft, and experience a
           30 minute discovery flight over the Kawarthas."
         paypalId="TCAW3VTBMV55J"
@@ -80,7 +80,7 @@ const GiftCertificatesPage = () => (
 
       <Package
         title="60 Minute Orientation Flight"
-        cost="$165"
+        cost="$195"
         description="In a one hour flight, you will enjoy the beauty of the Kawarthas as never seen before. We can cruise over the Otonabee river at 2,000 feet, and fly the north shore of Rice Lake."
         paypalId="WGQNMP6RA2X9N"
       />
