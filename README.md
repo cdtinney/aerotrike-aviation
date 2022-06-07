@@ -1,7 +1,6 @@
 # aerotrikeaviation.com
-> A small business website.
 
-[![Build Status](https://travis-ci.org/cdtinney/aerotrike-aviation.svg?branch=develop)](https://travis-ci.org/cdtinney/aerotrike-aviation)
+> A small business website.
 
 ## Contents
 
@@ -18,22 +17,23 @@
 
 This website is built with:
 
-* [GatsbyJS](gatsbyjs.org) - Static website generation using React
-* [Travis CI](https://travis-ci.org) - Continuous integration
-  and deployment to GitHub Pages
+- [GatsbyJS](gatsbyjs.org) - Static website generation using React
+- GitHub Pages
 
 ## Developing
 
 Development is done on the `develop` branch.
-  * All commits to `develop` are automatically deployed.
-  * Development should be done on branches sourced from `develop`, NOT `master`.
+
+- All commits to `develop` are automatically deployed.
+- Development should be done on branches sourced from `develop`, NOT `master`.
 
 Deployment (i.e. build output) is found on `master`.
-  * This is because GitHub Pages User Pages must be deployed on `master`.
+
+- This is because GitHub Pages User Pages must be deployed on `master`.
 
 ### Requirements
 
-* Node.js - Latest LTS release
+- Node.js - Latest LTS release
 
 ### Installing
 
@@ -41,24 +41,24 @@ First, clone the repository.
 
 To install dependencies:
 
-```
-$ npm install
+```bash
+npm install
 ```
 
 ### Running
 
 To run a development server with live-reload (and linting):
 
-```
-$ npm run dev
+```bash
+npm run dev
 ```
 
 ### Building
 
 To build the website for production:
 
-```
-$ npm run build
+```bash
+npm run build
 ```
 
 Build output is located within the `public` folder.
