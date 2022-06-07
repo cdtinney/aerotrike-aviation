@@ -41,11 +41,11 @@ const TrainingPage = () => (
               </tr>
               <tr>
                 <td>Lessons - 5 hour package</td>
-                <td>$825</td>
+                <td>$975</td>
               </tr>
               <tr>
                 <td>Lessons - 20 hours (minimum for solo rating)</td>
-                <td>$3300</td>
+                <td>$3900</td>
               </tr>
               <tr>
                 <td>Pre-flight and post-flight briefings</td>

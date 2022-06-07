@@ -89,7 +89,7 @@ const GiftCertificatesPage = () => (
 
       <Package
         title="5 Hours of Lessons"
-        cost="$825"
+        cost="$975"
         description="Pre-pay for lessons for a loved one."
         paypalId="FXP7L6XT6ZNKW"
       />
