@@ -9,11 +9,6 @@ import NorthWing from '../images/manufacturers/north-wing.jpg';
 import LynxAvionics from '../images/manufacturers/lynx-avionics.png';
 import MicroAvionics from '../images/manufacturers/micro-avionics.jpg';
 
-import AirborneEdge from '../images/used-sales/2003_airborne_edge.jpg';
-import Airborne9121 from '../images/used-sales/2004_airborne_912xt/1.jpg';
-import AirborneRedback1 from '../images/used-sales/airborne_redback/1.jpg';
-import AirborneTLite1 from '../images/used-sales/airborne_t-lite/1.jpg';
-
 import './styles/sales.css';
 
 const SalesPage = () => (
@@ -21,22 +16,7 @@ const SalesPage = () => (
     <SEO title="Sales" />
     <DefaultLayoutContent>
       <h3>Used</h3>
-      <div className="panel panel-default used-sale">
-        <div className="panel-heading">
-          <h3 className="panel-title">2000 Sabre Folding Style</h3>
-          <span className="price">$5,000 CAD</span>
-        </div>
-        <div className="panel-body">
-          <span className="information">
-            <ul>
-              <li>Engine - Rotax 447 (35-40 hours TT)</li>
-              <li>Wing - SS Wing 16m (2nd Generation)</li>
-              <li>Ski Package</li>
-              <li>Stored indoors</li>
-            </ul>
-          </span>
-        </div>
-      </div>
+      <p>Nothing at the moment. Check back later!</p>
 
       <h3>New</h3>
       <p>
