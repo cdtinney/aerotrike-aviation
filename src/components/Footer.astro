@@ -1,0 +1,27 @@
+---
+import Address from './contact/Address.astro';
+import Email from './contact/Email.astro';
+import Phone from './contact/Phone.astro';
+import Social from './contact/Social.astro';
+---
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+        <div class="col-md-3 col-sm-4 col-xs-8 contact-info-container">
+          <Email />
+        </div>
+        <div class="col-md-3 col-sm-2 col-xs-12 contact-info-container">
+          <Phone />
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-8 contact-info-container">
+          <Address />
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-4 contact-info-container">
+          <Social />
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,124 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import DefaultLayoutContent from '../components/DefaultLayoutContent.astro';
+---
+
+<DefaultLayout title="Gift Certificates">
+  <Navbar />
+  <DefaultLayoutContent>
+    <h3>Flights</h3>
+    <p>All prices exclude applicable taxes. They are NON-REFUNDABLE.</p>
+    <p>
+      Gift certificates can also be purchased with payment via Interac e-transfer.
+      <br />
+      <a href="mailto:montgomery@nexicom.net?subject=Gift%20Certificate%20Purchase">
+        E-mail us today to order one.
+      </a>
+    </p>
+
+    <div class="panel panel-primary gift-cert-package">
+      <div class="panel-heading">
+        <div class="row">
+          <div class="col-md-10">
+            <div class="panel-title">30 Minute Discovery Flight</div>
+            <div class="cost">$125</div>
+          </div>
+          <div class="col-md-2">
+            <span class="buy-now">
+              <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_s-xclick" />
+                <input type="hidden" name="hosted_button_id" value="TCAW3VTBMV55J" />
+                <input
+                  type="image"
+                  src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif"
+                  name="submit"
+                  alt="PayPal - The safer, easier way to pay online!"
+                />
+              </form>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="panel-body">
+        Learn basic control of the aircraft, and experience a
+        30 minute discovery flight over the Kawarthas.
+      </div>
+    </div>
+
+    <div class="panel panel-primary gift-cert-package">
+      <div class="panel-heading">
+        <div class="row">
+          <div class="col-md-10">
+            <div class="panel-title">60 Minute Orientation Flight</div>
+            <div class="cost">$195</div>
+          </div>
+          <div class="col-md-2">
+            <span class="buy-now">
+              <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_s-xclick" />
+                <input type="hidden" name="hosted_button_id" value="WGQNMP6RA2X9N" />
+                <input
+                  type="image"
+                  src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif"
+                  name="submit"
+                  alt="PayPal - The safer, easier way to pay online!"
+                />
+              </form>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="panel-body">
+        In a one hour flight, you will enjoy the beauty of the Kawarthas as never seen before. We can cruise over the Otonabee river at 2,000 feet, and fly the north shore of Rice Lake.
+      </div>
+    </div>
+
+    <h3>Lessons</h3>
+
+    <div class="panel panel-primary gift-cert-package">
+      <div class="panel-heading">
+        <div class="row">
+          <div class="col-md-10">
+            <div class="panel-title">5 Hours of Lessons</div>
+            <div class="cost">$975</div>
+          </div>
+          <div class="col-md-2">
+            <span class="buy-now">
+              <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_s-xclick" />
+                <input type="hidden" name="hosted_button_id" value="FXP7L6XT6ZNKW" />
+                <input
+                  type="image"
+                  src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif"
+                  name="submit"
+                  alt="PayPal - The safer, easier way to pay online!"
+                />
+              </form>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="panel-body">
+        Pre-pay for lessons for a loved one.
+      </div>
+    </div>
+  </DefaultLayoutContent>
+  <hr />
+  <Footer />
+</DefaultLayout>
+
+<style>
+  .panel, .panel > * {
+    border-radius: 0;
+  }
+
+  .panel-title {
+    font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  }
+
+  .buy-now form {
+    height: 50px;
+  }
+</style>

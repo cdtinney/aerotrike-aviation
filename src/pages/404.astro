@@ -1,0 +1,15 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import DefaultLayoutContent from '../components/DefaultLayoutContent.astro';
+---
+
+<DefaultLayout title="404">
+  <Navbar />
+  <DefaultLayoutContent>
+    <h3>404 - Page not found</h3>
+  </DefaultLayoutContent>
+  <hr />
+  <Footer />
+</DefaultLayout>

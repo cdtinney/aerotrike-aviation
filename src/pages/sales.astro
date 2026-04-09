@@ -1,0 +1,58 @@
+---
+import { Image } from 'astro:assets';
+import DefaultLayout from '../layouts/DefaultLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import DefaultLayoutContent from '../components/DefaultLayoutContent.astro';
+
+import Airborne from '../assets/manufacturers/airborne.jpg';
+import NorthWing from '../assets/manufacturers/north-wing.jpg';
+import LynxAvionics from '../assets/manufacturers/lynx-avionics.png';
+import MicroAvionics from '../assets/manufacturers/micro-avionics.jpg';
+---
+
+<DefaultLayout title="Sales">
+  <Navbar />
+  <DefaultLayoutContent>
+    <h3>Used</h3>
+    <p>Nothing at the moment. Check back later!</p>
+
+    <h3>New</h3>
+    <p>
+      Aerotrike Aviation is an authorized agent/distributor for the following manufacturers:
+    </p>
+    <div class="row">
+      <div class="col-md-6 col-sm-3 col-xs-6 authorized-manufacturer">
+        <a href="http://www.airborne.com.au/">
+          <Image class="logo" src={Airborne} alt="Airborne Australia" />
+        </a>
+      </div>
+
+      <div class="col-md-6 col-sm-3 col-xs-6 authorized-manufacturer">
+        <a href="http://www.northwing.com">
+          <Image class="logo" src={NorthWing} alt="North Wing" />
+        </a>
+      </div>
+
+      <div class="col-md-6 col-sm-3 col-xs-6 authorized-manufacturer">
+        <a href="http://www.lynx-avionics.com">
+          <Image class="logo" src={LynxAvionics} alt="Lynx Avionics" />
+        </a>
+      </div>
+
+      <div class="col-md-6 col-sm-3 col-xs-6 authorized-manufacturer">
+        <a href="http://www.microavionics.co.uk">
+          <Image class="logo" src={MicroAvionics} alt="MicroAvionics" />
+        </a>
+      </div>
+    </div>
+  </DefaultLayoutContent>
+  <hr />
+  <Footer />
+</DefaultLayout>
+
+<style>
+  .used-sale > .thumbnail {
+    max-width: 128px;
+  }
+</style>

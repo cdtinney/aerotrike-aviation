@@ -1,0 +1,43 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  class?: string;
+}
+
+const {
+  title,
+  description = 'Ultralight flight training at its best.',
+  class: className,
+} = Astro.props;
+
+const siteTitle = 'Aerotrike Aviation';
+const fullTitle = `${title} | ${siteTitle}`;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,700" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+  </head>
+  <body>
+    <div class={className}>
+      <slot />
+    </div>
+    <script is:inline src="/vendor/pace/js/pace.min.js"></script>
+    <script is:inline src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script is:inline src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
