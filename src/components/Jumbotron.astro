@@ -1,0 +1,63 @@
+---
+import { Image } from 'astro:assets';
+import JumbotronImage from '../assets/JumbotronImage.png';
+---
+
+<div id="home__jumbotron" class="jumbotron">
+  <div class="container">
+    <div class="row">
+      <div class="jumbotron__content col-md-7 col-md-offset-1">
+        <h1><span>Ultralight flight training at its best.</span></h1>
+        <p>Located in Peterborough, Ontario. Since 1999.</p>
+        <a class="btn btn-default btn-lg" href="/about/">Learn more</a>
+      </div>
+      <div class="jumbotron__image-container">
+        <Image class="jumbotron__image" alt="jumbotron" src={JumbotronImage} />
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .jumbotron__content {
+    z-index: 999;
+    text-shadow: 3px 3px 6px rgba(45, 45, 80, 0.75);
+  }
+
+  .jumbotron__image-container {
+    position: absolute;
+    top: 250px;
+    right: 50px;
+    width: 400px;
+    max-width: 95%;
+  }
+
+  .jumbotron__image {
+    position: absolute;
+    width: 100%;
+    height: auto;
+  }
+
+  @media (max-width: 550px) {
+    .jumbotron__image-container {
+      top: 280px;
+      width: 300px;
+    }
+  }
+
+  @media (max-width: 475px) {
+    .jumbotron__image-container {
+      top: 350px;
+      right: 25px;
+      width: 280px;
+    }
+  }
+
+  @media (max-width: 360px) {
+    .jumbotron__image-container {
+      top: 400px;
+      right: 25px;
+      width: 280px;
+    }
+  }
+</style>

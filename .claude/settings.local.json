@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.userhat.com)",
+      "WebFetch(domain:docs.astro.build)",
+      "Bash(npm install:*)",
+      "Bash(npm config:*)",
+      "Read(//Users/ctinney/**)",
+      "Bash(npm view:*)",
+      "Bash(npm run:*)",
+      "WebSearch",
+      "WebFetch(domain:www.contentful.com)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(gh pr:*)"
+    ]
+  }
+}

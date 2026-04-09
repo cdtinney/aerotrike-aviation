@@ -1,0 +1,68 @@
+---
+const pathname = Astro.url.pathname;
+
+const leftLinks = [
+  { to: '/', text: 'Home' },
+  { to: '/about/', text: 'About' },
+  { to: '/training/', text: 'Training' },
+  { to: '/gift-certificates/', text: 'Gift Certificates' },
+  { to: '/sales/', text: 'Sales' },
+  { to: '/gallery/', text: 'Gallery' },
+];
+
+const rightLinks = [
+  { to: '/faq/', text: 'FAQ' },
+  { to: '/contact/', text: 'Contact Us' },
+];
+
+function isActive(linkPath: string): boolean {
+  return pathname === linkPath;
+}
+---
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button
+        type="button"
+        class="navbar-toggle collapsed"
+        data-toggle="collapse"
+        data-target="#navbar"
+        aria-expanded="false"
+        aria-controls="navbar"
+      >
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">AEROTRIKE AVIATION</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        {leftLinks.map(link => (
+          <li>
+            <a
+              href={link.to}
+              style={isActive(link.to) ? 'color: #555; background-color: #e7e7e7;' : ''}
+            >
+              {link.text}
+            </a>
+          </li>
+        ))}
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        {rightLinks.map(link => (
+          <li>
+            <a
+              href={link.to}
+              style={isActive(link.to) ? 'color: #555; background-color: #e7e7e7;' : ''}
+            >
+              {link.text}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</nav>

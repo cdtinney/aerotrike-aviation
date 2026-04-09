@@ -1,0 +1,184 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import DefaultLayoutContent from '../components/DefaultLayoutContent.astro';
+
+const photos = [
+  { src: '/img/gallery/1.jpg', width: 800, height: 600 },
+  { src: '/img/gallery/2.jpg', width: 640, height: 480 },
+  { src: '/img/gallery/3.jpg', width: 800, height: 534 },
+  { src: '/img/gallery/4.jpg', width: 800, height: 600 },
+  { src: '/img/gallery/5.jpg', width: 800, height: 601 },
+  { src: '/img/gallery/6.jpg', width: 1040, height: 780 },
+];
+---
+
+<DefaultLayout title="Gallery">
+  <Navbar />
+  <DefaultLayoutContent>
+    <div id="gallery" class="gallery-grid">
+      {photos.map((photo, i) => (
+        <a href={photo.src} class="gallery-item" data-index={i}>
+          <img src={photo.src} alt={`Gallery photo ${i + 1}`} loading="lazy" width={photo.width} height={photo.height} />
+        </a>
+      ))}
+    </div>
+  </DefaultLayoutContent>
+  <hr />
+  <Footer />
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <button class="lightbox-prev" aria-label="Previous">&lsaquo;</button>
+    <button class="lightbox-next" aria-label="Next">&rsaquo;</button>
+    <img id="lightbox-img" class="lightbox-img" alt="" />
+  </div>
+</DefaultLayout>
+
+<style>
+  .gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 15px;
+  }
+
+  .gallery-item {
+    flex: 1 1 auto;
+    max-height: 200px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .gallery-item img {
+    height: 200px;
+    width: auto;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.2s;
+  }
+
+  .gallery-item:hover img {
+    transform: scale(1.05);
+  }
+
+  .lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.9);
+    align-items: center;
+    justify-content: center;
+  }
+
+  .lightbox[aria-hidden="false"] {
+    display: flex;
+  }
+
+  .lightbox-img {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+  }
+
+  .lightbox-close,
+  .lightbox-prev,
+  .lightbox-next {
+    position: absolute;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 3rem;
+    cursor: pointer;
+    padding: 10px 20px;
+    z-index: 10000;
+  }
+
+  .lightbox-close {
+    top: 10px;
+    right: 20px;
+  }
+
+  .lightbox-prev {
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .lightbox-next {
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .lightbox-close:hover,
+  .lightbox-prev:hover,
+  .lightbox-next:hover {
+    color: #ccc;
+  }
+</style>
+
+<script is:inline>
+  (function() {
+    var photos = [
+      '/img/gallery/1.jpg',
+      '/img/gallery/2.jpg',
+      '/img/gallery/3.jpg',
+      '/img/gallery/4.jpg',
+      '/img/gallery/5.jpg',
+      '/img/gallery/6.jpg',
+    ];
+    var currentIndex = 0;
+    var lightbox = document.getElementById('lightbox');
+    var lightboxImg = document.getElementById('lightbox-img');
+
+    function open(index) {
+      currentIndex = index;
+      lightboxImg.src = photos[currentIndex];
+      lightboxImg.alt = 'Gallery photo ' + (currentIndex + 1);
+      lightbox.setAttribute('aria-hidden', 'false');
+    }
+
+    function close() {
+      lightbox.setAttribute('aria-hidden', 'true');
+    }
+
+    function prev() {
+      currentIndex = (currentIndex - 1 + photos.length) % photos.length;
+      lightboxImg.src = photos[currentIndex];
+      lightboxImg.alt = 'Gallery photo ' + (currentIndex + 1);
+    }
+
+    function next() {
+      currentIndex = (currentIndex + 1) % photos.length;
+      lightboxImg.src = photos[currentIndex];
+      lightboxImg.alt = 'Gallery photo ' + (currentIndex + 1);
+    }
+
+    document.querySelectorAll('.gallery-item').forEach(function(item) {
+      item.addEventListener('click', function(e) {
+        e.preventDefault();
+        open(parseInt(item.getAttribute('data-index')));
+      });
+    });
+
+    lightbox.querySelector('.lightbox-close').addEventListener('click', close);
+    lightbox.querySelector('.lightbox-prev').addEventListener('click', prev);
+    lightbox.querySelector('.lightbox-next').addEventListener('click', next);
+
+    lightbox.addEventListener('click', function(e) {
+      if (e.target === lightbox) close();
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (lightbox.getAttribute('aria-hidden') === 'false') {
+        if (e.key === 'Escape') close();
+        if (e.key === 'ArrowLeft') prev();
+        if (e.key === 'ArrowRight') next();
+      }
+    });
+  })();
+</script>

@@ -1,0 +1,45 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro';
+import Navbar from '../components/Navbar.astro';
+import DefaultLayoutContent from '../components/DefaultLayoutContent.astro';
+import Address from '../components/contact/Address.astro';
+import Email from '../components/contact/Email.astro';
+import Phone from '../components/contact/Phone.astro';
+---
+
+<DefaultLayout title="Contact">
+  <Navbar />
+  <DefaultLayoutContent>
+    <h3>
+      Have a question that isn't covered by the
+      <a href="/faq/">FAQ</a>?
+      Get in touch!
+    </h3>
+    <p>Want to book lessons? Buy a gift certificate? Learn more about flying?</p>
+    <p>Call, e-mail, or visit us today.</p>
+
+    <hr />
+
+    <div class="row contact-grid">
+      <div class="col-sm-4 contact-block">
+        <Phone />
+      </div>
+      <div class="col-sm-4 contact-block">
+        <Email />
+      </div>
+      <div class="col-sm-4 contact-block">
+        <Address />
+      </div>
+    </div>
+  </DefaultLayoutContent>
+</DefaultLayout>
+
+<style is:global>
+  .contact-block {
+    margin-bottom: 25px;
+  }
+
+  .contact-block h5 {
+    margin-bottom: 8px;
+  }
+</style>
