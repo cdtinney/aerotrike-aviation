@@ -5,75 +5,41 @@ import DefaultLayoutContent from '../components/DefaultLayoutContent.astro';
 import Address from '../components/contact/Address.astro';
 import Email from '../components/contact/Email.astro';
 import Phone from '../components/contact/Phone.astro';
-import Social from '../components/contact/Social.astro';
 ---
 
 <DefaultLayout title="Contact">
   <Navbar />
   <DefaultLayoutContent>
-    <div class="row">
-      <div class="col-md-6 col-sm-6">
-        <h3>
-          Have a question that isn't covered by the
-          <a href="/faq/"> FAQ</a>
-          ? Get in touch!
-        </h3>
-        <p>Want to book lessons? Buy a gift certificate? Learn more about flying? </p>
-        <p>Call, e-mail, or visit us today.</p>
+    <h3>
+      Have a question that isn't covered by the
+      <a href="/faq/">FAQ</a>?
+      Get in touch!
+    </h3>
+    <p>Want to book lessons? Buy a gift certificate? Learn more about flying?</p>
+    <p>Call, e-mail, or visit us today.</p>
+
+    <hr />
+
+    <div class="row contact-grid">
+      <div class="col-sm-4 contact-block">
+        <Phone />
       </div>
-      <div style="margin-top: 20px;">
-        <div class="col-md-3 col-sm-4 col-xs-8 contact-info-container">
-          <Email />
-        </div>
-
-        <div class="col-md-3 col-sm-2 col-xs-12 contact-info-container">
-          <Phone />
-        </div>
+      <div class="col-sm-4 contact-block">
+        <Email />
       </div>
-    </div>
-    <div class="row">
-      <div id="map-embed-container">
-        <div id="map-embed-lg" class="col-md-6 map-embed">
-          <iframe
-            title="map-lg"
-            width="370"
-            height="260"
-            style="border: 0;"
-            src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJN-ZoZ2mS1YkRkuIOIMfirMY&key=AIzaSyBNJ7_cipz7IHf2b8v49DXvRlb-Vs-VNp0"
-            allowfullscreen
-          ></iframe>
-        </div>
-
-        <div id="map-embed-sm" class="col-md-6 col-sm-6 map-embed">
-          <iframe
-            title="map-sm"
-            width="320"
-            height="200"
-            style="border: 0;"
-            src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJN-ZoZ2mS1YkRkuIOIMfirMY&key=AIzaSyBNJ7_cipz7IHf2b8v49DXvRlb-Vs-VNp0"
-            allowfullscreen
-          ></iframe>
-        </div>
-
-        <div id="map-embed-xs" class="col-md-6 map-embed">
-          <iframe
-            title="map-xs"
-            width="200"
-            height="100"
-            style="border: 0;"
-            src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJN-ZoZ2mS1YkRkuIOIMfirMY&key=AIzaSyBNJ7_cipz7IHf2b8v49DXvRlb-Vs-VNp0"
-            allowfullscreen
-          ></iframe>
-        </div>
-      </div>
-
-      <div class="col-md-3 col-sm-4 col-xs-8 contact-info-container">
+      <div class="col-sm-4 contact-block">
         <Address />
-      </div>
-
-      <div class="col-md-3 col-sm-2 col-xs-4 contact-info-container">
-        <Social />
       </div>
     </div>
   </DefaultLayoutContent>
 </DefaultLayout>
+
+<style is:global>
+  .contact-block {
+    margin-bottom: 25px;
+  }
+
+  .contact-block h5 {
+    margin-bottom: 8px;
+  }
+</style>
